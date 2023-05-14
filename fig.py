@@ -1,11 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt 
 import numpy as np 
-import seaborn as sns
 
-cifarpath=f'/home/yh/INR_draw/cifar.xlsx'
-flopath=f'/home/yh/INR_draw/flo.xlsx'
-minipath=f'/home/yh/INR_draw/mini.xlsx'
+cifarpath=f'cifar.xlsx'
+flopath=f'flo.xlsx'
+minipath=f'mini.xlsx'
 x_lable=[1,2,3,4,5,6,7,8,'INR']
 def plotting(data,ax,title):
     y_baseline=np.array(data['baseline'].to_list(),dtype=float)
@@ -28,7 +27,6 @@ def plotting(data,ax,title):
 
 if __name__ =='__main__':
     fig, (ax1,ax2,ax3) = plt.subplots(1,3)
-    sns.color_palette("pastel")
     #cifar
     cifar=pd.read_excel(cifarpath)
     print(cifar)
